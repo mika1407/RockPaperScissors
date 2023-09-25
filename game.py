@@ -6,7 +6,36 @@ computer = random.choice(choices)
 player = None
 
 while player not in choices:
-  player = input("rock, paper or scissors?: ")
+  player = input("rock, paper or scissors?: ").lower()
 
-print("computer: ", computer)
-print("player: ", player)
+if player == computer:
+  print("computer: ", computer)
+  print("player: ", player)
+  print("Tie!")
+elif player == "rock":
+  if computer == "paper":
+      print("computer: ", computer)
+      print("player: ", player)
+      print("You lose!")
+  if computer == "scissors":
+    print("computer: ", computer)
+    print("player: ", player)
+    print("You win!")
+elif player == "scissors":
+  if computer == "rock":
+      print("computer: ", computer)
+      print("player: ", player)
+      print("You lose!")
+  if computer == "paper":
+    print("computer: ", computer)
+    print("player: ", player)
+    print("You win!")
+elif player == "paper":
+  if computer == "rock":
+      print("computer: ", computer)
+      print("player: ", player)
+      print("You win!")
+  if computer == "scissors":
+    print("computer: ", computer)
+    print("player: ", player)
+    print("You lose!")
